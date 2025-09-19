@@ -2,47 +2,63 @@ const request = require("request");
 const fs = require("fs-extra");
 
 module.exports.config = {
- name: "owner2",
- version: "1.0.1",
- hasPermssion: 0,
- credits: "Shahadat SAHU",
- description: "Display bot owner's information",
- commandCategory: "Info",
- usages: "",
- cooldowns: 5,
- dependencies: {
- request: "",
- "fs-extra": "",
- axios: ""
- }
+  name: "owner",
+  version: "1.0.1",
+  hasPermssion: 0,
+  credits: "SHAHADAT SAHU",
+  description: "Show Owner Info with styled box & random photo",
+  commandCategory: "Information",
+  usages: "owner",
+  cooldowns: 2
 };
 
 module.exports.run = async function ({ api, event }) {
- const imageUrl = "https://graph.facebook.com/100001039692046/picture?height=720&width=720&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662";
- const path = __dirname + "/cache/owner.png";
 
- request(imageUrl)
- .pipe(fs.createWriteStream(path))
- .on("close", () => {
- api.sendMessage({
- body:
-`🌟 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 🌟
+  
+  const info = `
+╔═════════════════════ ✿
+║ ✨ 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 ✨
+╠═════════════════════ ✿
+║ 👑 𝗡𝗮𝗺𝗲 : SAIM 𝗦𝗔𝗛𝗨
+║ 🧸 𝗡𝗶𝗰𝗸 𝗡𝗮𝗺𝗲 : SAIM
+║ 🎂 𝗔𝗴𝗲 : 𝟭6+
+║ 💘 𝗥𝗲𝗹𝗮𝘁𝗶𝗼𝗻 : 𝗦𝗶𝗻𝗴𝗹𝗲
+║ 🎓 𝗣𝗿𝗼𝗳𝗲𝘀𝘀𝗶𝗼𝗻 : 𝗦𝘁𝘂𝗱𝗲𝗻𝘁
+║ 📚 𝗘𝗱𝘂𝗰𝗮𝘁𝗶𝗼𝗻 : 9
+║ 🏡 𝗔𝗱𝗱𝗿𝗲𝘀𝘀 : Borisal
+╠═════════════════════ ✿
+║ 🔗 𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗟𝗜𝗡𝗞𝗦
+╠═════════════════════ ✿
+║ 📘 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 :
+║ fb.com/61566961113103
+║ 💬 𝗠𝗲𝘀𝘀𝗲𝗻𝗴𝗲𝗿 :
+║ m.me/61566961113103
+║ 📞 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 :
+║ wa.me/01961046150
+║ ✈️ 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 :
+║ t.me/yoursahu
+╚═════════════════════ ✿
+`;
 
-👑 𝗡𝗮𝗺𝗲: Shahadat Islam😘
-😻 𝗔𝗱𝗱𝗿𝗲𝘀𝘀: মেয়েদের মনে🙈
-💼 𝗣𝗿𝗼𝗳𝗲𝘀𝘀𝗶𝗼𝗻: মেয়েদের মন জয় করা😍
+  const images = [
+    "https://i.imgur.com/4ACOjI2.jpeg",
+    "https://i.imgur.com/4ACOjI2.jpeg",
+    "https://i.imgur.com/4ACOjI2.jpeg",
+    "https://i.imgur.com/4ACOjI2.jpeg"
+  ];
 
-🌐 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸: আইডি বেইচ্চা খাইয়া লাইছি😁
-💬 𝗠𝗲𝘀𝘀𝗲𝗻𝗴𝗲𝗿: দিলে Future বউ ধইরা মারব😌
-📺 𝗬𝗼𝘂𝗧𝘂𝗯𝗲: কবে YouTubal ছিলাম 😺
-📸 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺: গরিব বলে ফেসবুক চালাই শুধু 🥺
-📱 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽: দিলে আমার আম্মু বকা দিবা 🤣
-🎵 𝗧𝗶𝗸𝗧𝗼𝗸: সরি আমি প্রতিবন্ধী না🥱
-👻 𝗦𝗻𝗮𝗽𝗰𝗵𝗮𝘁: তোদের মতো কালা নাকি ফিল্টার লাগামু🤭
+  const randomImg = images[Math.floor(Math.random() * images.length)];
 
-🤖 𝗕𝗢𝗧 𝗕𝗬: ─꯭─⃝‌‌𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭
-`,
- attachment: fs.createReadStream(path)
- }, event.threadID, () => fs.unlinkSync(path));
- });
+  const callback = () => api.sendMessage(
+    {
+      body: info,
+      attachment: fs.createReadStream(__dirname + "/cache/owner.jpg")
+    },
+    event.threadID,
+    () => fs.unlinkSync(__dirname + "/cache/owner.jpg")
+  );
+
+  return request(encodeURI(randomImg))
+    .pipe(fs.createWriteStream(__dirname + "/cache/owner.jpg"))
+    .on("close", () => callback());
 };

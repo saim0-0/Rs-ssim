@@ -2,7 +2,7 @@ module.exports.config = {
     name: "ckbot",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "𝐒𝐇𝐀𝐇𝐀𝐃𝐀𝐓 𝐒𝐀𝐇𝐔",
+    credits: "𝐒𝐀𝐈𝐌 𝐁𝐇𝐀𝐈",
     description: "DESCRIPTION ABOUT BOT",
     commandCategory: "Media",
     usages: "",
@@ -54,7 +54,7 @@ module.exports.run = async ({ api, event, args }) => {
     if (args[0] == "admin") {
         let callback = () => api.sendMessage(
             {
-                body: `———»ADMIN BOT«———\n❯ Name: 𝐒𝐇𝐀𝐇𝐀𝐃𝐀𝐓 𝐒𝐀𝐇𝐔\n❯ Facebook: https://facebook.com/100001039692046\n❯ Thanks for using ${global.config.BOTNAME} bot`,
+                body: `———»ADMIN BOT«———\n❯ Name: 𝐒𝐀𝐈𝐌 𝐁𝐇𝐀𝐈 \n❯ Facebook: https://facebook.com/61566961113103\n❯ Thanks for using ${global.config.BOTNAME} bot`,
                 attachment: fs.createReadStream(__dirname + "/cache/1.png")
             },
             event.threadID,

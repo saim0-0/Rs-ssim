@@ -7,13 +7,13 @@
 
 
 Assalamualaikum Everyone!  
-**Welcome to My SHAHADAT CHAT BOT Fork!**
+**Welcome to My 𝐒𝐀𝐈𝐌 𝐂𝐇𝐀𝐓 𝐁𝐎𝐓 Fork!**
 
-![Box-shaped Image](https://i.imgur.com/u7VnPzH.png)
+![Box-shaped Image](https://i.imgur.com/5TGZghz.jpeg)
 
 <p align="center" style="animation: glow 2s infinite alternate; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <span style="font-size: 24px; font-weight: bold;">SHAHADAT CHAT BOT</span><br>
-  <span> Develop By SHAHADAT SAHU</span>
+  <span style="font-size: 24px; font-weight: bold;">SAIM CHAT BOT</span><br>
+  <span> Develop By SAIM VAI</span>
 </p>
 
 
@@ -142,9 +142,9 @@ ___
 **Location:** **`KHAGRACHARI, BANGLADESH`**  
 
 ### 📞 **CONTACT INFORMATION**  
-- **WhatsApp:** **[01882 333052](https://wa.me/+8801882333052)**  
-- **Facebook:** **[Facebook ID](https://facebook.com/100001039692046)**  
-- **Messenger:** **[Message Me](https://m.me/100001039692046)**  
+- **WhatsApp:** **[01961046150](https://wa.me/+8801961046150)**  
+- **Facebook:** **[Facebook ID](https://facebook.com/61566961113103)**  
+- **Messenger:** **[Message Me](https://m.me/61566961113103)**  
 
 ### 🚀 **DEVELOPMENT APPROACH**  
 - 💻 **Copy-paste techniques with customizations**  
